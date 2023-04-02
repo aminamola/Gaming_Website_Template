@@ -1,0 +1,139 @@
+header{
+    .navbar{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+
+        .logo{
+            flex: 1;
+        }
+
+        .search-box{
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            border: 1px solid $border;
+            border-radius: 12px;
+            -webkit-border-radius: 12px;
+            -moz-border-radius: 12px;
+            -ms-border-radius: 12px;
+            -o-border-radius: 12px;
+            &{
+                @include max-w(lg){
+                    display: none;
+                }
+            }
+
+            .menu{
+                border-right: 1px solid $border;
+                position: relative;
+                padding: 10px 22px;
+                padding-left: 26px;
+
+                .dropdown-title{
+                    font-size: 16px;
+                    color: $blue;
+                    font-weight: 700;
+
+                    i{
+                        font-size: 14px;
+                        padding-left: 5px;
+                    }
+                }
+    
+                ul{
+                    display: flex;
+                }
+
+                .dropdown-content {
+                    display: none;
+                    position: absolute;
+                    width: 100%;
+                    z-index: 1;
+                    background-color: #fff;
+                    left: 0;
+                    right: 0;
+                    top: calc(100% + 3px);
+                    box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+                    border-radius: 12px;
+                    -webkit-border-radius: 12px;
+                    -moz-border-radius: 12px;
+                    -ms-border-radius: 12px;
+                    -o-border-radius: 12px;
+                    overflow: hidden;
+                    li{
+                        padding: 10px;
+                        padding-left: 26px;
+                        &:not(:last-of-type){
+                            border-bottom: 1px solid $bc-gray;
+                        }
+
+                        &:hover{
+                            background-color: $bc-gray;
+                            color: $blue;
+                        }
+
+                        a{
+                            color: gray;
+                            font-weight: 500;
+                            &:hover{
+                                color: $blue;
+                            }
+                        }
+                    }
+                }
+            }
+
+            input{
+                border:none;
+                font-size: 16px;
+                margin-right: 20px;
+                width: 360px;
+                padding: 4px 14px;
+    
+                &:focus{
+                outline: none;
+                }
+
+                &::placeholder{
+                font-size: 16px;
+                }
+            }
+
+            .fa-search{
+                color: $blue;
+                font-size: 16px;
+                border-left: 1px solid $border;
+                padding: 11px 16px;
+                cursor: pointer;
+            }
+        }
+
+        .auth{
+            display: flex;
+            gap: 5px;
+            &{
+                @include max-w(lg){
+                    display: none;
+                }
+            }
+            }
+    }
+
+    .navbar_toggle{
+        padding: 5px 8px;
+        font-size: 30px;
+        color: $orange;
+        background-color: transparent;
+        border: none;
+        display: none;
+        cursor: pointer;
+
+        &{
+            @include max-w(lg){
+                display: block;
+            }
+        }
+    }
+}

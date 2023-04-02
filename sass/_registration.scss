@@ -1,0 +1,113 @@
+.registration{
+    padding: 30px 0;
+
+    h2{
+        color: $dark-blue;
+        font-size: 30px;
+        font-weight: 700;
+        position: relative;
+    }
+
+    h2::after{
+        position: absolute;
+        content:"";
+        bottom: -25px;
+        left: 50px;
+        width: 70%;
+        border: 1px solid #524d4d;
+    }
+
+    ul{
+        display: flex;
+        gap: 2px;
+        position: absolute;
+        right: 0;
+        top: 40px;
+
+        li{
+            i{
+                color: #4C69FF;
+                background-color: #dbdff1e2;
+                padding: 10px;
+                border-radius: 50%;
+                -webkit-border-radius: 50%;
+                -moz-border-radius: 50%;
+                -ms-border-radius: 50%;
+                -o-border-radius: 50%;
+}
+        }
+    }
+
+    .r-body{
+        padding: 55px 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+        justify-content: space-between;
+
+        .card{
+            &{
+            @include max-w(sm){
+                flex-basis: 100%;
+                text-align: center;
+            }
+
+            &{
+                @include max-w(sm){
+                    flex-basis: 50%;
+                }
+            }
+
+            &{
+                @include devices(md){
+                flex-basis: 16%;
+            }
+            }
+
+            
+        }
+        img{
+            width: 100%;
+            border-radius: 14px;
+            -webkit-border-radius: 14px;
+            -moz-border-radius: 14px;
+            -ms-border-radius: 14px;
+            -o-border-radius: 14px;
+        }
+
+        .card-title{
+            color: $dark-blue;
+            font-weight: 800;
+            line-height: 2;
+        }
+    
+        .card-text{
+            text-transform: uppercase;
+            color: $blue;
+            font-size: 12px;
+            line-height: 1.5;
+        }
+    
+        .card-footer{
+            display: flex;
+            padding: 10px 0;
+            justify-content: space-between;
+    
+            i{
+                color: #4C69FF;
+                font-size: 14px;
+            }
+            .price{
+                font-size: 12px;
+                font-weight: bold;
+    
+                span{
+                    font-weight: normal;
+                    color: #524d4d;
+                    text-decoration: line-through;
+                }
+            }
+        }
+        }
+    }
+}

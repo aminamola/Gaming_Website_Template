@@ -1,0 +1,108 @@
+footer{
+    margin-top: 40px;
+    padding: 30px 0;
+    border-top: 2px solid $border;
+
+    .container{
+        display: flex;
+        justify-content: space-between;
+        &{
+            @include max-w(sm){
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+            }
+        }
+
+        ul{
+            margin-bottom: 20px;
+        }
+
+        .logo{
+            display: flex;
+            align-items: center;
+
+            h4{
+                font-weight: bold;
+            }
+        }
+
+        p{
+            font-size: 13px;
+            color: $text;
+            padding: 20px 0;
+            max-width: 360px;
+            line-height: 1.5;
+        }
+
+        h5{
+            font-weight: bold;
+            color: $dark-blue;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .company{
+            img{
+                width: 100%;
+                &{
+                    @include max-w(xs){
+                        width: 100%;
+                    }
+                }
+            }
+            ul{
+                margin-top: 10px;
+                i{
+                    margin-right: 7px;
+                    color: rgb(36, 36, 93);
+
+                    &:first-child{
+                        margin-top: 5px;
+                    }
+                    
+                }
+
+                li{
+                    display: flex;
+                    line-height: 1.6;
+                    &:not(:first-child){
+                        align-items: center;
+                    }
+                }
+            }
+        }
+
+        .socials{
+            display: flex;
+            gap: 3px;
+            margin: 10px 0;
+            &{
+                @include max-w(sm){
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+
+            li{
+                font-size: 19px;
+                border-radius: 14px;
+                -webkit-border-radius: 14px;
+                -moz-border-radius: 14px;
+                -ms-border-radius: 14px;
+                -o-border-radius: 14px;
+                margin-right: 12px;
+            }
+        }
+
+        ul{
+            li{
+                margin-bottom: 10px;
+                a{
+                    color: $dark-blue;
+                }
+            }
+        }
+    }
+}
